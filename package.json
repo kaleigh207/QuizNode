@@ -1,0 +1,22 @@
+{
+  "name": "QuizNode",
+  "version": "0.0.0",
+  "description": "A weekend hackathon",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/taylor1791/QuizNode"
+  },
+  "keywords": [
+    "quiz"
+  ],
+  "author": "Taylor Everding <everding.taylor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taylor1791/QuizNode/issues"
+  },
+  "homepage": "https://github.com/taylor1791/QuizNode"
+}
