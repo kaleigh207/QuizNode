@@ -12,9 +12,14 @@
         width: 100%;
         font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
         font-weight: 300;
-        background-color: #f3fffd;
         font-size: 2vmin;
+        height: 100%;
+        background-color: #1cdee6;
+        background-image:linear-gradient(#1cdee6, #00abb3);
+
+
       }
+
 
       main {
         width: 56.25vh;
@@ -26,18 +31,20 @@
         top:0; bottom:0;
         left:0; right:0;
         border: 3px solid;
+        border-color: #B34600;
         border-radius: 25px;
+        background-image:linear-gradient(#1cdee6, #00abb3);
       }
 
       h1 {
         height:30%;
         margin: 0;
-        border: 1px solid black;
+        border: 1px solid #B34600;
         border-radius: 20px 20px 0 0;
         line-height: 8;
-        background-color: grey;
+        background-color: lightgray;
         text-align: center;
-        color: deeppink;
+        color: #FF7319;
       }
 
       progress {
@@ -45,6 +52,19 @@
         height: 3%;
         -webkit-appearance: none;
         appearance: none;
+
+      }
+      progress[value]::-webkit-progress-value {
+        background-image:
+        -webkit-linear-gradient(-45deg,
+        transparent 33%, rgba(0, 0, 0, .1) 33%,
+        rgba(0, 0, 0, .1) 66%, transparent 66%),
+        -webkit-linear-gradient(top,
+        rgba(225, 225, 225, .25),
+        rgba(0, 0, 0, .25)),
+        -webkit-linear-gradient(left, #00ABB3, #FF2331);
+        border-radius: 2px;
+        background-size: 35px 20px, 100% 100%, 100% 100%;
       }
 
       .entry {
@@ -55,8 +75,8 @@
         font-weight: 300;
         line-height: 2;
         line-height: 2;
-        color: deeppink;
-        background-color: gray;
+        color: #FF7319;
+        background-color: lightgrey;
         font-size: 3vmin;
         text-align: center;
       }
@@ -72,6 +92,9 @@
         background: -webkit-linear-gradient(top,#eeeef0 0,#d3d3d9 100%);
         width: 30%;
         height: 30%;
+        border: 2px;
+        border-color: #B34600;
+        border-radius: 6px;
       }
 
       div.numberEntry > div.span2 {
@@ -83,7 +106,7 @@
   <body>
     <main>
       <h1> 10+2 </h1>
-      <progress value="8" max="10"></progress>
+      <progress value="10" max="10"></progress>
       <div class="entry"> 1 </div>
       <div class="numberEntry">
         <div> / </div>
