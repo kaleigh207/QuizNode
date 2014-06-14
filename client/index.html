@@ -30,6 +30,7 @@
       }
 
       h1 {
+        height:30%;
         margin: 0;
         border: 1px solid black;
         border-radius: 20px 20px 0 0;
@@ -46,13 +47,44 @@
         appearance: none;
       }
 
+      .entry {
+        height: 8%;
+        width: 30%;
+        margin: 0 auto;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: 300;
+        line-height: 2;
+        line-height: 2;
+        color: deeppink;
+        background-color: gray;
+        font-size: 3vmin;
+        text-align: center;
+      }
+
+      div.numberEntry {
+        height: 39%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      div.numberEntry > div {
+        background: -webkit-linear-gradient(top,#eeeef0 0,#d3d3d9 100%);
+        width: 30%;
+        height: 30%;
+      }
+
+      div.numberEntry > div.span2 {
+        width: 65%;
+      }
+
     </style>
   </head>
   <body>
     <main>
       <h1> 10+2 </h1>
-      <progress value="4" max="10"></progress>
-      <div class="entry"> 1</div>
+      <progress value="8" max="10"></progress>
+      <div class="entry"> 1 </div>
       <div class="numberEntry">
         <div> / </div>
         <div class="span2"> Backspace </div>
