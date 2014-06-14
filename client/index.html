@@ -9,29 +9,27 @@
       * { box-sizing: border-box; }
 
       html, body {
+        margin: 0;
         width: 100%;
         font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
         font-weight: 300;
         font-size: 2vmin;
         height: 100%;
         background-color: #1cdee6;
-        background-image:linear-gradient(#1cdee6, #00abb3);
-
-
+        background-image: linear-gradient(#1cdee6, #00abb3);
+        text-shadow: 1px 1px 1px #000;
       }
 
 
       main {
         width: 56.25vh;
         height: 90vh;
-        max-height: 160vh;
-        max-width: 90vh;
         margin: auto;
         position: absolute;
         top:0; bottom:0;
         left:0; right:0;
         border: 3px solid;
-        border-color: #B34600;
+        border-color: #dc3912;
         border-radius: 25px;
         background-image:linear-gradient(#1cdee6, #00abb3);
       }
@@ -41,8 +39,8 @@
         margin: 0;
         border: 1px solid #B34600;
         border-radius: 20px 20px 0 0;
-        line-height: 8;
-        background-color: lightgray;
+        line-height: 27vh;
+        background: -webkit-linear-gradient(top,#eeeef0 0,#d3d3d9 100%);
         text-align: center;
         color: #FF7319;
       }
@@ -54,51 +52,50 @@
         appearance: none;
 
       }
-      progress[value]::-webkit-progress-value {
-        background-image:
-        -webkit-linear-gradient(-45deg,
-        transparent 33%, rgba(0, 0, 0, .1) 33%,
-        rgba(0, 0, 0, .1) 66%, transparent 66%),
-        -webkit-linear-gradient(top,
-        rgba(225, 225, 225, .25),
-        rgba(0, 0, 0, .25)),
-        -webkit-linear-gradient(left, #00ABB3, #FF2331);
+      progress[value]::-webkit-progress-bar {
+        background-color: #00abb3;
         border-radius: 2px;
-        background-size: 35px 20px, 100% 100%, 100% 100%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
       }
-
+      progress::-webkit-progress-value {
+        background-color: #dc3912;
+      }
       .entry {
         height: 8%;
-        width: 30%;
-        margin: 0 auto;
+        width: 100%;
+        margin: 0;
         font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
         font-weight: 300;
-        line-height: 2;
-        line-height: 2;
+        line-height: 7.2vh;
         color: #FF7319;
-        background-color: lightgrey;
-        font-size: 3vmin;
+        background: -webkit-linear-gradient(top,#eeeef0 0,#d3d3d9 100%);
+        font-size: 5vmin;
         text-align: center;
       }
 
       div.numberEntry {
-        height: 39%;
+        height: 59%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
+        align-content: space-around;
       }
 
       div.numberEntry > div {
         background: -webkit-linear-gradient(top,#eeeef0 0,#d3d3d9 100%);
         width: 30%;
-        height: 30%;
-        border: 2px;
-        border-color: #B34600;
+        height: 17.5%;
+        text-align: center;
+        line-height: 9.2925vh;
+        font-size: 2.5em;
         border-radius: 6px;
+
+        /* border: 2px; */
+        /*border-color: #dc3912; */
       }
 
       div.numberEntry > div.span2 {
-        width: 65%;
+        width: 62.5%;
       }
 
     </style>
@@ -106,7 +103,7 @@
   <body>
     <main>
       <h1> 10+2 </h1>
-      <progress value="10" max="10"></progress>
+      <progress value="6" max="10"></progress>
       <div class="entry"> 1 </div>
       <div class="numberEntry">
         <div> / </div>
