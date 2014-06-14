@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/taylor1791/QuizNode/issues"
   },
-  "homepage": "https://github.com/taylor1791/QuizNode"
+  "homepage": "https://github.com/taylor1791/QuizNode",
+  "devDependencies": {
+    "mongoose": "^3.8.12"
+  }
 }
