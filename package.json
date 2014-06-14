@@ -23,10 +23,11 @@
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "mongoose": "^3.8.12"
+    "grunt-contrib-watch": "^0.6.1"
   },
   "dependencies": {
-    "node-static": "^0.7.3"
+    "mongodb": "^1.4.6",
+    "node-static": "^0.7.3",
+    "reparsed": "git+ssh://git@github.com/taylor1791/reparsed.git"
   }
 }

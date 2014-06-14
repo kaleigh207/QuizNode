@@ -1,25 +1,27 @@
 (function() {
   'use strict';
 
-  var db = require('./db/index.js');
+  var Reparst = require('reparst'),
+      MongoClient= require('mongodb').MongoClient,
+      mongoUser = 'quiznode',
+      mongoPass = 'qu13n0d3r',
+      host      = 'ds033037.mongolab.com:33037',
+      dbName    = 'quiznode',
+      dbUrl = 
+        'mongodb://' + mongoUser + ':' + mongoPass + '@' + host + '/' + dbName;
+
+  var router = new Reparst(__dirname + '/schema');
+
+  var serverApp = {
+    'serve': router.route
+  };
 
   module.exports = {
     'ready': function(cb) {
-      db.ready(function() {
-        var Quiz = db.Quiz;
-
-        cb({
-          serve: function(req, res) {
-            Quiz.find({}, function(err, quizes) {
-              if(err) return res.end(err);
-              return res.end(JSON.stringify(quizes));
-            });
-          }
-        });
-      });
+      MongoClient.connect(dbUrl, cb);
     }
   };
 
-  //new mongoose.Quiz({ 'title': 'quiz test', groups: ['test'], questions: []});
-  
 })();
+
+

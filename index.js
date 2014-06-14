@@ -11,8 +11,8 @@
     var clientApp = new nStatic.Server('./client');
 
     http.createServer(function(req, res) {
-      var hostname = url.parse('http://' + req.headers.host).hostname;
-      var isServerRequest = hostname.match(/^api/);
+      var parsedUrl = url.parse(req.protocol + '://' + req.headers.host);
+      var isServerRequest = parsedUrl.hostname.match(/^api/);
 
       if(isServerRequest) serverApp.serve.apply(serverApp, arguments);
       else clientApp.serve.apply(clientApp, arguments);
