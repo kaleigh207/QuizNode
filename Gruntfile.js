@@ -2,6 +2,20 @@ module.exports = function(grunt) {
   'use strict';
 
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+    less: {
+      development: {
+        options: {
+          compress: true,
+          optimization: 0,
+          strictUnits: true,
+          sourceMap: true
+        },
+        files: {
+          'client/css/<%= pkg.name %>.css': 'client/less/<%= pkg.name %>.less',
+        }
+      }
+    },
     jshint: {
       files: [
         'Gruntfile.js', 'index.js',
@@ -52,7 +66,8 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('default', ['jshint', 'less']);
 };
